@@ -99,7 +99,7 @@
         display: flex;
         justify-content: space-between;
         padding: 0 20px;
-        background-color: rgba($color: #000000, $alpha: .2);
+        background-color:  #d3d3d3;
     }
     &-logo {
         img {
@@ -170,3 +170,19 @@
     }
 
 }
+
+.dropdown__menu {
+    position: absolute;
+    display: block;
+    z-index: 100;
+    background-color: #d3d3d3;
+    padding: 10px;
+    width: max-content;
+    box-shadow: 5px 5px 10px -5px;
+    &-item {
+        padding: 5px;
+        font-weight: 300;
+    }
+  
+}
+

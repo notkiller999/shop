@@ -66,6 +66,7 @@
         &-panel {
             display: flex;
             margin-top: 10px;
+            flex-wrap: wrap;
         }
         &-block {
             cursor: pointer;
@@ -75,6 +76,7 @@
             font-weight: 100;
             min-width: 40px;
             margin-right: 5px;
+            margin-top: 5px;
             border: 1px solid $dark;
             &-active {
                 color: #fff;

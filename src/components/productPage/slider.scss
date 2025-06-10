@@ -1,0 +1,24 @@
+.more-products {
+    .card-active {
+        height: 300px;
+        min-height: 300px;
+    }
+    .product-slider-inner {
+        height: 300px;
+    }
+    
+    .card-img {
+        height: 70%;
+    }
+    
+    .card-title {
+        font-size: 12px;
+    }
+    .card-price {
+        font-size: 12px;
+    }
+    
+    .card-item-active {
+        display: none;
+    }
+}

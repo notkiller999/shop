@@ -1,18 +1,26 @@
 {
+    "products": [],
     "hits": [
         {
-            "id" : "107",
+            "id": "107",
             "title": "Длинное Женское Платье В Клетку",
             "price": "780.00",
             "oldPrice": "1333.00",
             "currency": "UAH",
             "show": "да",
             "avaiability": "В наличии",
+            "section": "Платья",
+            "aditional_section": [
+                "Платья длинные",
+                "Платья деловые",
+                "Платья повседневные"
+            ],
             "photo": "https://ninelestyle.com.ua/content/images/42/dlinnoe-bordovoe-zhenskoe-plate-v-kletku-26848125579684_+1d8e868c69.jpg",
             "colors": {
                 "Красный": {
                     "sizes": [
-                        "50", "52"
+                        "50",
+                        "52"
                     ],
                     "photos": [
                         "https://ninelestyle.com.ua/content/images/42/dlinnoe-bordovoe-zhenskoe-plate-v-kletku-26848125579684_+1d8e868c69.jpg",
@@ -24,7 +32,9 @@
                 },
                 "Зелёный": {
                     "sizes": [
-                        "50", "52", "54"
+                        "50",
+                        "52",
+                        "54"
                     ],
                     "photos": [
                         "https://ninelestyle.com.ua/content/images/44/povsednevnoe-dlinnoe-zelenoe-zhenskoe-plate-22535288490311_+ce3330db7e.jpg",
@@ -36,9 +46,8 @@
                 }
             }
         },
-        
         {
-            "id" : "108",
+            "id": "108",
             "title": "Длинное Женское Платье В Клетку",
             "price": "780.00",
             "oldPrice": "1333.00",
@@ -49,7 +58,8 @@
             "colors": {
                 "Красный": {
                     "sizes": [
-                        "50", "52"
+                        "50",
+                        "52"
                     ],
                     "photos": [
                         "https://ninelestyle.com.ua/content/images/42/dlinnoe-bordovoe-zhenskoe-plate-v-kletku-26848125579684_+1d8e868c69.jpg",
@@ -57,23 +67,26 @@
                         "https://ninelestyle.com.ua/content/images/42/dlinnoe-bordovoe-zhenskoe-plate-v-kletku-16918918257086_+80c8a93dbb.jpg",
                         "https://ninelestyle.com.ua/content/images/42/dlinnoe-bordovoe-zhenskoe-plate-v-kletku-34735789040055_+1e62b4e1b6.jpg"
                     ],
-                    "mainPhoto" : "https://ninelestyle.com.ua/content/images/42/dlinnoe-bordovoe-zhenskoe-plate-v-kletku-26848125579684_+1d8e868c69.jpg"
+                    "mainPhoto": "https://ninelestyle.com.ua/content/images/42/dlinnoe-bordovoe-zhenskoe-plate-v-kletku-26848125579684_+1d8e868c69.jpg"
                 },
                 "Зелёный": {
                     "sizes": [
-                        "50", "52"
+                        "50",
+                        "52"
                     ],
                     "photos": [
                         "https://ninelestyle.com.ua/content/images/44/povsednevnoe-dlinnoe-zelenoe-zhenskoe-plate-22535288490311_+ce3330db7e.jpg",
                         "https://ninelestyle.com.ua/content/images/44/povsednevnoe-dlinnoe-zelenoe-zhenskoe-plate-30881110002474_+41eeb260bf.jpg",
                         "https://ninelestyle.com.ua/content/images/44/povsednevnoe-dlinnoe-zelenoe-zhenskoe-plate-59947366005329_+47347c5b87.jpg",
                         "https://ninelestyle.com.ua/content/images/44/povsednevnoe-dlinnoe-zelenoe-zhenskoe-plate-12726792433300_+d535843886.jpg"
-                    ], 
+                    ],
                     "mainPhoto": "https://ninelestyle.com.ua/content/images/44/povsednevnoe-dlinnoe-zelenoe-zhenskoe-plate-22535288490311_+ce3330db7e.jpg"
                 },
                 "Чорный": {
                     "sizes": [
-                        "48", "50", "52"
+                        "48",
+                        "50",
+                        "52"
                     ],
                     "photos": [
                         "https://ninelestyle.com.ua/content/images/44/povsednevnoe-dlinnoe-zelenoe-zhenskoe-plate-22535288490311_+ce3330db7e.jpg",
@@ -86,7 +99,7 @@
             }
         },
         {
-            "id" : "109",
+            "id": "109",
             "title": "Длинное Женское Платье В Клетку",
             "price": "780.00",
             "oldPrice": "1333.00",
@@ -97,7 +110,8 @@
             "colors": {
                 "Красный": {
                     "sizes": [
-                        "50", "52"
+                        "50",
+                        "52"
                     ],
                     "photos": [
                         "https://ninelestyle.com.ua/content/images/42/dlinnoe-bordovoe-zhenskoe-plate-v-kletku-26848125579684_+1d8e868c69.jpg",
@@ -109,7 +123,8 @@
                 },
                 "Зелёный": {
                     "sizes": [
-                        "50", "52"
+                        "50",
+                        "52"
                     ],
                     "photos": [
                         "https://ninelestyle.com.ua/content/images/44/povsednevnoe-dlinnoe-zelenoe-zhenskoe-plate-22535288490311_+ce3330db7e.jpg",
@@ -121,45 +136,8 @@
                 }
             }
         },
-         {
-            "id" : "106",
-            "title": "Длинное Женское Платье В Клетку",
-            "price": "780.00",
-            "oldPrice": "1333.00",
-            "currency": "UAH",
-            "show": "да",
-            "avaiability": "В наличии",
-            "photo": "https://ninelestyle.com.ua/content/images/42/dlinnoe-bordovoe-zhenskoe-plate-v-kletku-26848125579684_+1d8e868c69.jpg",
-            "colors": {
-                "Красный": {
-                    "sizes": [
-                        "50", "52"
-                    ],
-                    "photos": [
-                        "https://ninelestyle.com.ua/content/images/42/dlinnoe-bordovoe-zhenskoe-plate-v-kletku-26848125579684_+1d8e868c69.jpg",
-                        "https://ninelestyle.com.ua/content/images/42/dlinnoe-bordovoe-zhenskoe-plate-v-kletku-64563451979521_+3e606ccd1f.jpg",
-                        "https://ninelestyle.com.ua/content/images/42/dlinnoe-bordovoe-zhenskoe-plate-v-kletku-16918918257086_+80c8a93dbb.jpg",
-                        "https://ninelestyle.com.ua/content/images/42/dlinnoe-bordovoe-zhenskoe-plate-v-kletku-34735789040055_+1e62b4e1b6.jpg"
-                    ],
-                    "mainPhoto": "https://ninelestyle.com.ua/content/images/42/dlinnoe-bordovoe-zhenskoe-plate-v-kletku-26848125579684_+1d8e868c69.jpg"
-                },
-                "Зелёный": {
-                    "sizes": [
-                        "50", "52", "54"
-                    ],
-                    "photos": [
-                        "https://ninelestyle.com.ua/content/images/44/povsednevnoe-dlinnoe-zelenoe-zhenskoe-plate-22535288490311_+ce3330db7e.jpg",
-                        "https://ninelestyle.com.ua/content/images/44/povsednevnoe-dlinnoe-zelenoe-zhenskoe-plate-30881110002474_+41eeb260bf.jpg",
-                        "https://ninelestyle.com.ua/content/images/44/povsednevnoe-dlinnoe-zelenoe-zhenskoe-plate-59947366005329_+47347c5b87.jpg",
-                        "https://ninelestyle.com.ua/content/images/44/povsednevnoe-dlinnoe-zelenoe-zhenskoe-plate-12726792433300_+d535843886.jpg"
-                    ],
-                    "mainPhoto": "https://ninelestyle.com.ua/content/images/44/povsednevnoe-dlinnoe-zelenoe-zhenskoe-plate-22535288490311_+ce3330db7e.jpg"
-                }
-            }
-        },
-        
         {
-            "id" : "105",
+            "id": "106",
             "title": "Длинное Женское Платье В Клетку",
             "price": "780.00",
             "oldPrice": "1333.00",
@@ -170,7 +148,8 @@
             "colors": {
                 "Красный": {
                     "sizes": [
-                        "50", "52"
+                        "50",
+                        "52"
                     ],
                     "photos": [
                         "https://ninelestyle.com.ua/content/images/42/dlinnoe-bordovoe-zhenskoe-plate-v-kletku-26848125579684_+1d8e868c69.jpg",
@@ -178,23 +157,65 @@
                         "https://ninelestyle.com.ua/content/images/42/dlinnoe-bordovoe-zhenskoe-plate-v-kletku-16918918257086_+80c8a93dbb.jpg",
                         "https://ninelestyle.com.ua/content/images/42/dlinnoe-bordovoe-zhenskoe-plate-v-kletku-34735789040055_+1e62b4e1b6.jpg"
                     ],
-                    "mainPhoto" : "https://ninelestyle.com.ua/content/images/42/dlinnoe-bordovoe-zhenskoe-plate-v-kletku-26848125579684_+1d8e868c69.jpg"
+                    "mainPhoto": "https://ninelestyle.com.ua/content/images/42/dlinnoe-bordovoe-zhenskoe-plate-v-kletku-26848125579684_+1d8e868c69.jpg"
                 },
                 "Зелёный": {
                     "sizes": [
-                        "50", "52"
+                        "50",
+                        "52",
+                        "54"
                     ],
                     "photos": [
                         "https://ninelestyle.com.ua/content/images/44/povsednevnoe-dlinnoe-zelenoe-zhenskoe-plate-22535288490311_+ce3330db7e.jpg",
                         "https://ninelestyle.com.ua/content/images/44/povsednevnoe-dlinnoe-zelenoe-zhenskoe-plate-30881110002474_+41eeb260bf.jpg",
                         "https://ninelestyle.com.ua/content/images/44/povsednevnoe-dlinnoe-zelenoe-zhenskoe-plate-59947366005329_+47347c5b87.jpg",
                         "https://ninelestyle.com.ua/content/images/44/povsednevnoe-dlinnoe-zelenoe-zhenskoe-plate-12726792433300_+d535843886.jpg"
-                    ], 
+                    ],
+                    "mainPhoto": "https://ninelestyle.com.ua/content/images/44/povsednevnoe-dlinnoe-zelenoe-zhenskoe-plate-22535288490311_+ce3330db7e.jpg"
+                }
+            }
+        },
+        {
+            "id": "105",
+            "title": "Длинное Женское Платье В Клетку",
+            "price": "780.00",
+            "oldPrice": "1333.00",
+            "currency": "UAH",
+            "show": "да",
+            "avaiability": "В наличии",
+            "photo": "https://ninelestyle.com.ua/content/images/42/dlinnoe-bordovoe-zhenskoe-plate-v-kletku-26848125579684_+1d8e868c69.jpg",
+            "colors": {
+                "Красный": {
+                    "sizes": [
+                        "50",
+                        "52"
+                    ],
+                    "photos": [
+                        "https://ninelestyle.com.ua/content/images/42/dlinnoe-bordovoe-zhenskoe-plate-v-kletku-26848125579684_+1d8e868c69.jpg",
+                        "https://ninelestyle.com.ua/content/images/42/dlinnoe-bordovoe-zhenskoe-plate-v-kletku-64563451979521_+3e606ccd1f.jpg",
+                        "https://ninelestyle.com.ua/content/images/42/dlinnoe-bordovoe-zhenskoe-plate-v-kletku-16918918257086_+80c8a93dbb.jpg",
+                        "https://ninelestyle.com.ua/content/images/42/dlinnoe-bordovoe-zhenskoe-plate-v-kletku-34735789040055_+1e62b4e1b6.jpg"
+                    ],
+                    "mainPhoto": "https://ninelestyle.com.ua/content/images/42/dlinnoe-bordovoe-zhenskoe-plate-v-kletku-26848125579684_+1d8e868c69.jpg"
+                },
+                "Зелёный": {
+                    "sizes": [
+                        "50",
+                        "52"
+                    ],
+                    "photos": [
+                        "https://ninelestyle.com.ua/content/images/44/povsednevnoe-dlinnoe-zelenoe-zhenskoe-plate-22535288490311_+ce3330db7e.jpg",
+                        "https://ninelestyle.com.ua/content/images/44/povsednevnoe-dlinnoe-zelenoe-zhenskoe-plate-30881110002474_+41eeb260bf.jpg",
+                        "https://ninelestyle.com.ua/content/images/44/povsednevnoe-dlinnoe-zelenoe-zhenskoe-plate-59947366005329_+47347c5b87.jpg",
+                        "https://ninelestyle.com.ua/content/images/44/povsednevnoe-dlinnoe-zelenoe-zhenskoe-plate-12726792433300_+d535843886.jpg"
+                    ],
                     "mainPhoto": "https://ninelestyle.com.ua/content/images/44/povsednevnoe-dlinnoe-zelenoe-zhenskoe-plate-22535288490311_+ce3330db7e.jpg"
                 },
                 "Чорный": {
                     "sizes": [
-                        "48", "50", "52"
+                        "48",
+                        "50",
+                        "52"
                     ],
                     "photos": [
                         "https://ninelestyle.com.ua/content/images/44/povsednevnoe-dlinnoe-zelenoe-zhenskoe-plate-22535288490311_+ce3330db7e.jpg",
@@ -207,7 +228,7 @@
             }
         },
         {
-            "id" : "104",
+            "id": "104",
             "title": "Длинное Женское Платье В Клетку",
             "price": "780.00",
             "oldPrice": "1333.00",
@@ -218,7 +239,8 @@
             "colors": {
                 "Красный": {
                     "sizes": [
-                        "50", "52"
+                        "50",
+                        "52"
                     ],
                     "photos": [
                         "https://ninelestyle.com.ua/content/images/42/dlinnoe-bordovoe-zhenskoe-plate-v-kletku-26848125579684_+1d8e868c69.jpg",
@@ -230,7 +252,8 @@
                 },
                 "Зелёный": {
                     "sizes": [
-                        "50", "52"
+                        "50",
+                        "52"
                     ],
                     "photos": [
                         "https://ninelestyle.com.ua/content/images/44/povsednevnoe-dlinnoe-zelenoe-zhenskoe-plate-22535288490311_+ce3330db7e.jpg",
@@ -242,7 +265,5 @@
                 }
             }
         }
-        
     ]
-    
 }

@@ -1,0 +1,199 @@
+@import "../../styles/_variables.scss";
+//left side
+.order {
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+    &-left{
+        width: 60%;
+    }
+    .tab{
+        &-item{
+            width: 100%;
+            &:hover{
+                color: $hover
+            }
+        }
+    }
+    .form{
+       
+        &-label{
+            width: 30%;
+            &--bold{
+                font-weight: bold;
+            }
+        }
+        &-input{
+            border: 1px solid #acacac;
+            background: #fff;
+            border-radius: 4px;
+            line-height: normal;           
+            transition: border-color .1s;
+            padding: 6px 8px;
+            font-size: 16px;
+            height: 36px;
+            width: 100%;
+            display: block;
+        }
+        &-checkbox{
+            font-size: 14px;
+            text-align: center;
+            font-style: italic;
+            font-weight: 100;
+        }
+        &-delivery{
+            .active{
+                display: contents
+            }
+            &-type{
+                display: none;
+            }
+        }
+        &-footer{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+        &-terms{
+            font-style: italic;
+            font-weight: 100;
+            font-size: 14px;
+            margin-left: 15px;
+            a{
+                color: #000;
+                &:hover{
+                    color: $hover;
+                }
+            }
+        }
+    }
+    .devider{
+        display: block;
+        border-top: 2px solid rgba(0, 0, 0, .2);
+        margin-top: 20px;
+    }
+    table {
+        margin-top: 20px;
+        width: 100%;
+    }
+    td {
+        height: 60px;
+        vertical-align: middle;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+    &-right{
+       margin-top: 20px;
+    }
+    &-cart{
+        border: 1px solid rgba(0, 0, 0, .2);
+        padding: 20px;
+    }
+    
+}
+//right side
+
+.order{
+    &-cart{
+        &-header{
+            font-weight: bold;
+            font-size: 24px;
+        }
+        &-item{
+            font-weight: 100;
+            display: flex;
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid rgba(0, 0, 0, .2)
+        }
+        &-img{
+            width: 100px;
+            img{
+                width: 100%;
+            }
+        }
+        &-info{
+            margin-left: 20px;
+        }
+        &-title{
+            margin-bottom: 10px;
+            a{
+                color: #000;
+                text-decoration: none;
+                &:hover{
+                    color: $hover;
+                }
+            }
+        }
+        &-price{
+            display: flex;
+            margin-bottom: 10px;
+            &-total{
+                text-align: right;
+                font-weight: bold;
+                font-size: 20px;
+                span{
+                    font-weight: 100;
+                }
+            }
+        }
+        &-counter {
+            position: relative;
+            .counter{
+                &-input {
+                    width: 90px;
+                    font-size: inherit;
+                    height: 40px;
+                    text-align: center;
+                }
+                &-minus, &-plus {
+                    position: absolute;
+                    font-size: 30px;
+                    height: 40px;
+                    padding: 0;
+                    width: 30px;
+                    position: absolute;
+                    line-height: 1.2;
+                    font-weight: 400;
+                    border: none;
+                }
+                &-minus {
+                    left: 0px;
+                }
+                &-plus {
+                    left: 60px;
+                }
+            }
+        }
+        &-delete {
+            width: 20px;
+            align-self: center;
+            cursor: pointer;
+            font-size: 24px;
+            color: #808080;
+            &:hover {
+                color: $hover
+            }
+        
+        }
+        &--price{
+            text-align: end;
+            font-weight: bold;
+        }
+       
+    }
+    .old-price{
+        text-decoration: line-through;
+        color: $light;
+        margin-right: 20px;
+    }
+    .price{
+        font-weight: normal;
+    }
+}
+
+

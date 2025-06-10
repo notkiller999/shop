@@ -1,43 +1,67 @@
-import { useEffect } from 'react';
-import ProductCard from '../productCrad/ProductCard';
-import miniSlider from '../utils/miniSlider';
+import { useEffect } from "react";
+import ProductCard from "../productCrad/ProductCard";
+import miniSlider from "../utils/miniSlider";
+import { changeFilter, productsFetch } from "../productCrad/productsSlice";
 
-import './productSlider.scss'
+import "./productSlider.scss";
+import { useDispatch, useSelector } from "react-redux";
+import Spinner from "../spinner/Spinner";
 
+const ProductSlider = ({ id, slides }) => {
+	const dispatch = useDispatch();
+	const status = useSelector((state) => state.products.productsLoadingStatus);
 
+	useEffect(() => {
+		dispatch(productsFetch());
+		dispatch(changeFilter(id));
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [id]);
 
-const ProductSlider = () => {
+	const slide = () => {
+		miniSlider({
+			container: ".product-slider",
+			sliderInner: ".product-slider-inner",
+			sliderItems: ".card-active",
+			sliderWrapper: ".product-slider-wrapper",
+			next: ".product-slider-next",
+			prev: ".product-slider-prev",
+			numberOfSlides: slides
+		});
+	};
 
-    useEffect(() => {
-        setTimeout(() => {
-            miniSlider({
-                container: ".product-slider",
-                sliderInner: ".product-slider-inner",
-                sliderItems: ".card-active",
-                sliderWrapper: ".product-slider-wrapper",
-                next: ".product-slider-next",
-                prev: ".product-slider-prev"
-            })
-        }, 1000)
-    }, [])
+	const errorMsg = status === "error" ? <div>Elements not found</div> : null;
+	const spiner = status === "loading" ? <Spinner /> : null;
+	const content = status === "idle" ? <View slide={slide} /> : null;
 
+	return (
+		<>
+			{errorMsg}
+			{spiner}
+			{content}
+		</>
+	);
+};
 
+const View = ({ slide }) => {
+	useEffect(() => {
+		slide();
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
+	return (
+		<div className="product-slider">
+			<div className="product-slider-prev" data-slider="prev">
+				<span className="slider-prev-icon">&lt;</span>
+			</div>
+			<div className="product-slider-next" data-slider="next">
+				<span className="slider-next-icon">&gt;</span>
+			</div>
+			<div className="product-slider-inner">
+				<div className="product-slider-wrapper">
+					<ProductCard />
+				</div>
+			</div>
+		</div>
+	);
+};
 
-    return (
-        <div className="product-slider">
-            <a href="#" className="product-slider-prev" data-slider="prev">
-                <span className="slider-prev-icon">&lt;</span>
-            </a>
-            <a href="#" className="product-slider-next" data-slider="next">
-                <span className="slider-next-icon">&gt;</span>
-            </a>
-            <div className="product-slider-inner">
-                <div className="product-slider-wrapper">
-                    <ProductCard/>                    
-                </div>
-            </div>
-        </div>
-    )
-}
-
-export default ProductSlider
+export default ProductSlider;
