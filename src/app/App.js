@@ -1,15 +1,14 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
+import CatalogPage from "../pages/catalogPage/CatalogPage";
+import Footer from "../components/footer/Footer";
+import Header from "../components/header/Header";
+import MainPage from "../pages/mainPage/MainPage";
+import ProductPage from "../pages/productPage/ProductPage";
+import Cart from "../components/cart/cart";
+import Order from "../pages/orderPage/Order";
 
-import CatalogPage from "../catalogPage/CatalogPage";
-import Footer from "../footer/Footer";
-import Header from "../header/Header";
-import MainPage from "../mainPage/MainPage";
-import ProductPage from "../productPage/ProductPage";
-import Cart from "../cart/cart";
-import Order from "../order/Order";
-
-import "../../styles/lib.css";
+import "../styles/lib.css";
 
 function App() {
 	return (

@@ -1,9 +1,7 @@
-import MainSlider from "../mainSlider/MainSlider";
-import MainBigBanner from "../mainBigBanner/MainBigBanner";
-import Banner from "../banner/Banner";
-import Tab from "../tab/Tab";
-// import ProductCard from "../productCrad/ProductCard";
-// import ProductSlider from "../productSlider/ProductSlider";
+import MainSlider from "../../components/mainSlider/MainSlider";
+import MainBigBanner from "../../components/mainBigBanner/MainBigBanner";
+import Banner from "../../components/banner/Banner";
+import Tab from "../../components/tab/Tab";
 
 const dataFirst = [
 	{

@@ -5,7 +5,7 @@ import { useEffect} from "react";
 
 import ProductPageLeft from "./productPageLeft/ProductPageLeft";
 import ProductPageRight from "./productPageRight/productPageRight";
-import ProductSlider from "../productSlider/ProductSlider";
+import ProductSlider from "../../components/productSlider/ProductSlider";
 
 import "./productPage.scss";
 import "./slider.scss";

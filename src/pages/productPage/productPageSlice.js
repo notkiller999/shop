@@ -3,7 +3,7 @@ import {
 	createAsyncThunk,
 	createEntityAdapter,
 } from "@reduxjs/toolkit";
-import { useHttp } from "../hooks/http.hook";
+import { useHttp } from "../../components/hooks/http.hook";
 
 const productAdaptor = createEntityAdapter();
 

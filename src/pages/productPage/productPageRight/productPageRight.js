@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Description from "./components/description";
 import Characters from "./components/characters";
 import DeliveryInfo from "./components/deliveryInfo";
-import { addToCart, changeVisible } from "../../cart/cartSlice";
+import { addToCart, changeVisible } from "../../../components/cart/cartSlice";
 
 const ProductPageRight = ({product, activeColor, activeSize}) => {
 

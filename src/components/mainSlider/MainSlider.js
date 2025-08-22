@@ -24,6 +24,7 @@ const MainSlider = () => {
     
     const elems = useMemo(() => {
         return renderSlides(slidesArray);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []) 
 
     

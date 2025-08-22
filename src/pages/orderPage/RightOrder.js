@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useDispatch} from "react-redux";
-import { changeCount, changeTotal, deleteFromCart} from "../cart/cartSlice";
+import { changeCount, changeTotal, deleteFromCart} from "../../components/cart/cartSlice";
 
 
 

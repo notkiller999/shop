@@ -1,5 +1,5 @@
 import classNames from "classnames"
-import { FastOrderForm, LoginForm, NewUserOrderForm } from "../forms/Forms";
+import { FastOrderForm, LoginForm, NewUserOrderForm } from "../../components/forms/Forms";
 
 const LeftOrder = ({active, setActive, totalPrice, products}) => {
 

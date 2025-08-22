@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { selectAll } from "../cart/cartSlice";
+import { selectAll } from "../../components/cart/cartSlice";
 import store from "../../store";
 import LeftOrder from "./LeftOrder";
 import "./order.scss"

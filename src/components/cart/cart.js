@@ -3,7 +3,7 @@ import "./cart.scss"
 import { changeCount, changeTotal, changeVisible, deleteFromCart, selectAll } from "./cartSlice";
 import store from "../../store";
 import { Link } from "react-router-dom";
-import { productFetch } from "../productPage/productPageSlice";
+import { productFetch } from "../../pages/productPage/productPageSlice";
 
 const Cart = () => {
 

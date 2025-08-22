@@ -10,7 +10,7 @@ import "./productCard.scss";
 
 import store from "../../store";
 import { Link } from "react-router-dom";
-import { productFetch } from "../productPage/productPageSlice";
+import { productFetch } from "../../pages/productPage/productPageSlice";
 
 const ProductCard = () => {
 	const dispatch = useDispatch();
