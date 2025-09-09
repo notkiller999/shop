@@ -8,10 +8,10 @@ import ProductCard from "../../components/productCrad/ProductCard";
 import "./catalogPage.scss";
 
 const CatalogPage = (props) => {
-	const dispatch = useDispatch();
+	const dispatch = useDispatch();    
 
 	useEffect(() => {
-		dispatch(productsFetch("products"));
+		dispatch(productsFetch());
 	}, []);
 
 	return (

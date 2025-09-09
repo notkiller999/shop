@@ -1,26 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import ProductSlider from "../productSlider/ProductSlider";
+import { useHttp } from "../hooks/http.hook";
 import "./tab.scss";
 
-const tabData = [
-	{
-		title: "Платья",
-		id: "Платья",
-	},
-	{
-		title: "Туники и блузки",
-		id: "Туники и блузки",
-	},
-	{
-		title: "Верхняя одежда",
-		id: "Верхняя одежда",
-	},
-];
+const Tab = (props) => {
 
-const Tab = () => {
-	const [active, setActive] = useState(tabData[0].id);
+    // const { request } = useHttp();
+    const {data} = props;
+    
+    // const [tabData, setTabData] = useState([]);
+	const [active, setActive] = useState(data[0].id);
+
+    // useEffect(() => {
+    //     const fetchTabs = async () => {
+    //         const data = await request("/tabs");            
+    //         setTabData(data);
+    //         setActive(data[0].id);
+    //     };
+    //     fetchTabs();
+    // }, []);
 
 	const renderTabs = (data) => {
+        
 		return data.map((item) => {
 			return (
 				<div
@@ -41,11 +42,13 @@ const Tab = () => {
 		setActive(e.target.id);
 	};
 
-	const elems = renderTabs(tabData);
+    if (data.length === 0 || active === null) {
+        return <div>Loading...</div>;
+    }
 
 	return (
 		<div className="tab">
-			<div className="tab__panel">{elems}</div>
+			<div className="tab__panel">{renderTabs(data)}</div>
 			<div className="tab__content">
 				<ProductSlider id={active} slides={4} />
 			</div>

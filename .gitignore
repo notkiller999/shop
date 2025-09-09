@@ -10,6 +10,10 @@
 
 # testing
 /coverage
+lettry.json
+newStuff.json
+stuff.json
+Try.json
 
 # production
 /build

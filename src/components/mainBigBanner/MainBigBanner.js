@@ -2,7 +2,8 @@ import logo from '../assets/icons/white logo.webp'
 import './mainBigBanner.scss';
 
 
-const MainBigBanner = () => {
+const MainBigBanner = (props) => {
+    const { data } = props;
     return   <div className="main">
                 <div className="main__block">
                     <div className="main__block-logo">
@@ -10,12 +11,12 @@ const MainBigBanner = () => {
                     </div>
                     <div className="main__block-text">
                         <div className="main__block-title">
-                            <h2>YOUR STYLE</h2>
+                            <h2>{data.title}</h2>
                         </div>
-                        <div className="main__block-descr">БЕЗУПРЕЧНОСТЬ НАЧИНАЕТСЯ С ТЕБЯ</div>
+                        <div className="main__block-descr">{data.subtitle}</div>
                         
-                            <a href="#" className="main__block-link">
-                                <div className="btn btn-outline-dark">ПЕРЕЙТИ В КАТАЛОГ</div>
+                            <a href={data.button.href} className="main__block-link">
+                                <div className="btn btn-outline-dark">{data.button.text}</div>
                             </a>
                         
                     </div>

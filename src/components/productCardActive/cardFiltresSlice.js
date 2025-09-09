@@ -15,7 +15,8 @@ export const activeCardFetch = createAsyncThunk(
 	"activeCard/dataFetching",
 	(id) => {
 		const { request } = useHttp();
-		return request(`http://localhost:3001/products/${id}`);
+		// return request(`http://localhost:3001/products/${id}`);
+        return request(`products?id=${id}`);
 	}
 );
 

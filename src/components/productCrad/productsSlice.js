@@ -13,10 +13,16 @@ const initialState = productsAdapter.getInitialState({
 	filter: null,
 });
 
-export const productsFetch = createAsyncThunk("products/productsFetch", () => {
+export const productsFetch = createAsyncThunk("products/productsFetch", async (args) => {
 	const { request } = useHttp();
-
-	return request(`http://localhost:3001/products`);
+    
+    if (args) {
+        // return request(`http://localhost:3001/products?section=${args}`);
+        return await request(`/products?section=${args}`);
+    }
+    
+	// return request(`http://localhost:3001/products`);
+    return await request(`/products`);
 });
 
 const productsSlice = createSlice({
@@ -42,6 +48,10 @@ const productsSlice = createSlice({
 			.addCase(productsFetch.fulfilled, (state, action) => {
 				state.productsLoadingStatus = "idle";
 				if (state.filter) {
+                    console.log(state.filter);
+                    console.log(action.payload);
+                    
+                    
 					productsAdapter.setAll(
 						state,
 						action.payload.filter((item) => item.section === state.filter)

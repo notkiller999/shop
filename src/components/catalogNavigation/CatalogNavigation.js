@@ -1,6 +1,9 @@
 import "./catalogNavigation.scss";
 
 const CatalogNavigation = () => {
+
+    
+
 	return (
 		<>
 			<section>

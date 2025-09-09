@@ -16,7 +16,8 @@ const initialState = productAdaptor.getInitialState({
 
 export const productFetch = createAsyncThunk("product/productFetch", (id) => {
 	const { request } = useHttp();
-	return request(`http://localhost:3001/products/${id}`);
+	// return request(`http://localhost:3001/products/${id}`);
+    return request(`/products/${id}`);
 });
 
 const productSlice = createSlice({

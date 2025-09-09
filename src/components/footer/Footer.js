@@ -6,6 +6,7 @@ import {
 	MasterCardIcon,
 	MobileIcon,
 	PhoneIcon,
+	ViberIcon,
 	VisaIcon,
 	WhatsAppIcon,
 } from "../assets/icons/icons";
@@ -168,7 +169,7 @@ const Footer = () => {
 						</div>
 						<div className="footer-conacts-internet">
 							<li>
-								<VisaIcon />
+								<ViberIcon />
 								<a href="viber://chat?number=%2B380505399657">
 									+38(050)-53-99-657
 								</a>

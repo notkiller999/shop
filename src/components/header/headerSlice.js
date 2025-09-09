@@ -14,7 +14,8 @@ const initialState = headerAdapter.getInitialState({
 
 export const headerFetch = createAsyncThunk("header/headerFetch", () => {
 	const { request } = useHttp();
-	return request("http://localhost:3001/categories");
+	// return request("http://localhost:3001/categories");
+    return request("/categories");
 });
 
 const headerSlice = createSlice({

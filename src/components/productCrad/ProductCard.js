@@ -24,7 +24,7 @@ const ProductCard = () => {
 
 	const count = 5;
 
-	const dis = (e, id) => {
+	const makeCardActive = (e, id) => {
 		e.stopPropagation();
 		if (downloadedId.findIndex((item) => item === id) < 0) {
 			dispatch(activeCardFetch(id));
@@ -39,7 +39,7 @@ const ProductCard = () => {
 				const { photo, title, id, price, oldPrice } = item;
 				return (
 					<div
-						onMouseEnter={(e) => dispatch(activate(id), dis(e, id))}
+						onMouseEnter={(e) => dispatch(activate(id), makeCardActive(e, id))}
 						onMouseLeave={() => dispatch(desactivate())}
 						key={id}
 						style={{ marginTop: "20px", width: `${window.innerWidth / count}px`}}

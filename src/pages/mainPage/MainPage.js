@@ -2,41 +2,64 @@ import MainSlider from "../../components/mainSlider/MainSlider";
 import MainBigBanner from "../../components/mainBigBanner/MainBigBanner";
 import Banner from "../../components/banner/Banner";
 import Tab from "../../components/tab/Tab";
-
-const dataFirst = [
-	{
-		img: "https://art.kartinkof.club/uploads/posts/2025-01/art-kartinkof-club-p11m-p-idei-dlya-risunkov-2d-arti-23.jpg",
-		name: "NATURE",
-	},
-	{
-		img: "https://art.kartinkof.club/uploads/posts/2025-01/art-kartinkof-club-oium-p-idei-dlya-risunkov-2d-arti-6.jpg",
-		name: "ABSTRACTION",
-	},
-	{
-		img: "https://img3.akspic.ru/crops/5/8/1/1/21185/21185-biom-gora-dnevnoe_vremya-iskusstvo-pejzazhi_gor-3840x2160.jpg",
-		name: "END OTHER",
-	},
-];
-
-const dataSecond = [
-	{
-		img: "https://art.kartinkof.club/uploads/posts/2025-01/art-kartinkof-club-bl30-p-idei-dlya-risunkov-red-art-8.jpg",
-		name: "NATURE",
-	},
-	{
-		img: "https://art.kartinkof.club/uploads/posts/2025-01/art-kartinkof-club-bp8e-p-idei-dlya-risunkov-red-art-18.jpg",
-		name: "ABSTRACTION",
-	},
-];
+import { useHttp } from "../../components/hooks/http.hook";
+import { useEffect, useState } from "react";
 
 const MainPage = () => {
+
+    const { request } = useHttp();
+
+    const [settings, setSettings] = useState({});
+
+    useEffect(() => {
+        request('/site?id=bloks')
+            .then(data => setSettings(data))
+            .catch(err => console.error(err));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    const renderBloks = (arr) => {
+        if (arr && arr.length > 0) {            
+            return arr.map((item, i) => {
+                switch(item.name) {
+
+                    case 'slider':                         
+                        const {delay, indicators, slides} = item;
+                        if (item.mask && item.mask.visible) {
+                            return <>
+                                <MainBigBanner key={"mask"} data={item.mask}/>
+                                <MainSlider 
+                                    key={i} 
+                                    delay={delay}
+                                    indicators={indicators}
+                                    slides={slides} 
+                                />
+                                </>
+                        }
+                        return <MainSlider 
+                                key={i} 
+                                delay={delay}
+                                indicators={indicators}
+                                slides={slides} 
+                            />;
+
+                    case 'block':
+                        return <Banner key={i} data={item.bloks}/>;
+                        
+                    case 'tabs':
+                        return <Tab key={i} data={item.tabs}/>;
+                    default: return null;
+                }
+            });
+        }
+        return null;
+    }    
+
+    const elems = renderBloks(settings.structure)
+
 	return (
 		<div>
-			<MainBigBanner />
-			<MainSlider />
-			<Banner data={dataFirst} />
-			<Banner data={dataSecond} />
-			<Tab />
+            {elems}
 		</div>
 	);
 };

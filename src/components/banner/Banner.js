@@ -1,5 +1,4 @@
 import './banner.scss'
-import logo from '../assets/icons/white_logo.png';
 
 const Banner = (props) => {
 
@@ -7,23 +6,27 @@ const Banner = (props) => {
 
     const renderItems = (data) => {
         return data.map((item, i) => {
-            const { name, img } = item
+            const {href,logo, title, background} = item
             const width = `${100 / data.length}%`
             return (
                 <div key={i} className="banner__item"
                     style={{ width }}>
-                    <a href="#" className="banner__item-link">
+                    <a href={href} className="banner__item-link">
                         <div className="banner__mask">
                             <div>
-                                <div className="banner__mask-logo">
-                                    <img src={logo} alt=""/>
-                                </div>
-                                <div className="banner__mask-descr">{name}</div>
+                                {
+                                    logo ? 
+                                    <div className="banner__mask-logo">
+                                        <img src={logo} alt=""/>
+                                    </div> 
+                                    : null
+                                }
+                                
+                                <div className="banner__mask-descr">{title}</div>
                             </div>
                         </div>
-                        <img src={img} alt={name}
+                        <img src={background} alt={title}
                             className="second-banner-item-img"/>
-                        <h2 className="second-banner-item-title"></h2>
                     </a>
                 </div>
             )
