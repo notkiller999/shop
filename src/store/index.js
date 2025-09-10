@@ -13,7 +13,7 @@ import {
 import storage from 'redux-persist/lib/storage';
 
 import header from "../components/header/headerSlice";
-import products from "../components/productCrad/productsSlice";
+import products from "../pages/catalogPage/productsSlice";
 import activeCard from "../components/productCardActive/cardFiltresSlice";
 import product from "../pages/productPage/productPageSlice";
 import cart from "../components/cart/cartSlice";

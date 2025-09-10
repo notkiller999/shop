@@ -3,7 +3,7 @@ import {
 	changeActiveColor,
 	changeActiveSize,
 } from "./cardFiltresSlice";
-import { changePhoto } from "../productCrad/productsSlice";
+import { changePhoto } from "../../pages/catalogPage/productsSlice";
 import classNames from "classnames";
 import store from "../../store";
 import { useDispatch, useSelector } from "react-redux";

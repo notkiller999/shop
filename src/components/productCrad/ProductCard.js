@@ -1,22 +1,24 @@
 import { useDispatch, useSelector } from "react-redux";
-import { activate, desactivate, selectById } from "./productsSlice";
+import { selectById } from "../../pages/catalogPage/productsSlice";
 import ProductCardActive from "../productCardActive/ProductCardActive";
 import { activeCardFetch } from "../productCardActive/cardFiltresSlice";
-import store from "../../store";
 import { Link } from "react-router-dom";
 
 import "./productCard.scss";
+import { useState } from "react";
 
 const ProductCard = ({id}) => {    
+    
+    const [active, setActive] = useState(false);
 
 	const dispatch = useDispatch();
-	const active = useSelector((state) => state.products.active);
 	const downloadedIds = useSelector((state) => state.activeCard.ids);
-    const product = selectById(store.getState(), id);
-	const count = 5;
+    const product = useSelector(state => selectById(state, id));
+	const count = 5;    
 
 	const makeCardActive = (e, id) => {
 		e.stopPropagation();
+        setActive(true)
 		if (downloadedIds.findIndex((item) => item === id) < 0) {
 			dispatch(activeCardFetch(id));
 		}
@@ -26,8 +28,8 @@ const ProductCard = ({id}) => {
         const { photo, title, id, price, oldPrice } = item;
         return (
             <div
-                onMouseEnter={(e) => dispatch(activate(id), makeCardActive(e, id))}
-                onMouseLeave={() => dispatch(desactivate())}
+                onMouseEnter={(e) => {makeCardActive(e, id)}}
+                onMouseLeave={() => setActive(false)}
                 key={id}
                 style={{ marginTop: "20px", width: `${window.innerWidth / count}px`}}
                 className="card card-active"
@@ -54,7 +56,7 @@ const ProductCard = ({id}) => {
                     <div className="card-price-old">{oldPrice}</div>
                     <div className="currency-old">грн</div>
                 </div>
-                {active === id ? <ProductCardActive id={id} /> : null}
+                {active ? <ProductCardActive id={id} /> : null}
             </div>
         );
     }

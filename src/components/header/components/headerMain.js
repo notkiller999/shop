@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { changeVisible } from "../../cart/cartSlice";
 import { useEffect} from "react";
 import { selectAll, headerFetch } from "../headerSlice";
-import { changeFilter, productsFetch } from "../../productCrad/productsSlice";
+import { changeFilter, productsFetch } from "../../../pages/catalogPage/productsSlice";
 
 import logo from "../../assets/icons/logo.webp";
 import { BasketIcon, ProfileIcon, SearchIcon } from "../../assets/icons/icons";
@@ -41,7 +41,7 @@ const HeaderMain = ({mainData}) => {
         } else return null;
 	};
 
-    const elems = renderCategories(categories)
+    const elems = renderCategories(categories.sort((a, b) => a.id - b.id));
     // const elems = useMemo(() => renderCategories(categories), [categories]);
 
     if (mainData.visible) {

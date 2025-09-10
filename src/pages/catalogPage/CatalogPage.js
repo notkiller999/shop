@@ -1,4 +1,4 @@
-import { productsFetch } from "../../components/productCrad/productsSlice";
+import { productsFetch } from "./productsSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 

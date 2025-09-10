@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { FacebookIcon, GlobeIcon, InstagramIcon, YoutubeIcon } from "../../assets/icons/icons";
 import { useDispatch } from "react-redux";
-import { changeFilter, productsFetch } from "../../productCrad/productsSlice";
+import { changeFilter, productsFetch } from "../../../pages/catalogPage/productsSlice";
 
 const HeaderHead = (props) => {
     const {headData} = props;  

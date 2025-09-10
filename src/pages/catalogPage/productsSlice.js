@@ -3,7 +3,7 @@ import {
 	createAsyncThunk,
 	createEntityAdapter,
 } from "@reduxjs/toolkit";
-import { useHttp } from "../hooks/http.hook";
+import { useHttp } from "../../components/hooks/http.hook";
 
 const productsAdapter = createEntityAdapter();
 
@@ -18,6 +18,7 @@ export const productsFetch = createAsyncThunk("products/productsFetch", async (a
     
     if (args) {        
         // return request(`http://localhost:3001/products?section=${args}`);
+        
         return await request(`/products?section=${args}`);
     }
     

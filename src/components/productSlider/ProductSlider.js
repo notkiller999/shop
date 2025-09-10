@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import ProductCard from "../productCrad/ProductCard";
 import miniSlider from "../utils/miniSlider";
-import { changeFilter, productsFetch } from "../productCrad/productsSlice";
+import { changeFilter, productsFetch } from "../../pages/catalogPage/productsSlice";
 
 import "./productSlider.scss";
 import { useDispatch, useSelector } from "react-redux";
@@ -10,9 +10,10 @@ import Spinner from "../spinner/Spinner";
 const ProductSlider = ({ id, slides }) => {
 	const dispatch = useDispatch();
 	const status = useSelector((state) => state.products.productsLoadingStatus);
+    const productIds = useSelector(state => state.products.ids);
 
 	useEffect(() => {
-		dispatch(productsFetch());
+		dispatch(productsFetch(id));
 		dispatch(changeFilter(id));
 	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [id]);
@@ -31,7 +32,7 @@ const ProductSlider = ({ id, slides }) => {
 
 	const errorMsg = status === "error" ? <div>Elements not found</div> : null;
 	const spiner = status === "loading" ? <Spinner /> : null;
-	const content = status === "idle" ? <View slide={slide} /> : null;
+	const content = status === "idle" ? <View slide={slide} ids={productIds}/> : null;
 
 	return (
 		<>
@@ -42,11 +43,20 @@ const ProductSlider = ({ id, slides }) => {
 	);
 };
 
-const View = ({ slide }) => {
+const View = ({ slide, ids }) => {
 	useEffect(() => {
 		slide();
 	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
+
+    const renderCards = (ids) => {
+        if (ids.length > 0) {
+            return ids.map((id) => <ProductCard key={id} id={id}/>)
+        }
+    }
+
+    const cards = renderCards(ids);
+
 	return (
 		<div className="product-slider">
 			<div className="product-slider-prev" data-slider="prev">
@@ -57,7 +67,7 @@ const View = ({ slide }) => {
 			</div>
 			<div className="product-slider-inner">
 				<div className="product-slider-wrapper">
-					<ProductCard />
+                    {cards}
 				</div>
 			</div>
 		</div>
