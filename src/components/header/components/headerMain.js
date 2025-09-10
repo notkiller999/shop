@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { changeVisible } from "../../cart/cartSlice";
-import { useEffect, useMemo} from "react";
+import { useEffect} from "react";
 import { selectAll, headerFetch } from "../headerSlice";
 import { changeFilter, productsFetch } from "../../productCrad/productsSlice";
 
@@ -23,11 +23,10 @@ const HeaderMain = ({mainData}) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     
-    const onChangeFilter = (id) => {
+    const onChangeFilter = (id, category) => {
         dispatch(changeFilter(id));
-        dispatch(productsFetch(id));
+        dispatch(productsFetch(category));
     };
-    
 
     const renderCategories = (data) => {
 
@@ -42,7 +41,8 @@ const HeaderMain = ({mainData}) => {
         } else return null;
 	};
 
-    const elems = useMemo(() => renderCategories(categories), [categories]);
+    const elems = renderCategories(categories)
+    // const elems = useMemo(() => renderCategories(categories), [categories]);
 
     if (mainData.visible) {
         return (

@@ -16,7 +16,7 @@ const initialState = productsAdapter.getInitialState({
 export const productsFetch = createAsyncThunk("products/productsFetch", async (args) => {
 	const { request } = useHttp();
     
-    if (args) {
+    if (args) {        
         // return request(`http://localhost:3001/products?section=${args}`);
         return await request(`/products?section=${args}`);
     }
@@ -48,13 +48,10 @@ const productsSlice = createSlice({
 			.addCase(productsFetch.fulfilled, (state, action) => {
 				state.productsLoadingStatus = "idle";
 				if (state.filter) {
-                    console.log(state.filter);
-                    console.log(action.payload);
-                    
-                    
 					productsAdapter.setAll(
 						state,
-						action.payload.filter((item) => item.section === state.filter)
+						action.payload.filter((item) => item.section === state.filter || 
+                        item.aditional_section.find(i => i === state.filter))
 					);
 				} else {
 					productsAdapter.setAll(state, action.payload);
@@ -69,7 +66,7 @@ const productsSlice = createSlice({
 
 const { reducer, actions } = productsSlice;
 
-export const { selectAll } = productsAdapter.getSelectors(
+export const { selectAll, selectById} = productsAdapter.getSelectors(
 	(state) => state.products
 );
 

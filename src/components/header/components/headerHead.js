@@ -1,14 +1,25 @@
 import { Link } from "react-router-dom";
 import { FacebookIcon, GlobeIcon, InstagramIcon, YoutubeIcon } from "../../assets/icons/icons";
+import { useDispatch } from "react-redux";
+import { changeFilter, productsFetch } from "../../productCrad/productsSlice";
 
 const HeaderHead = (props) => {
     const {headData} = props;  
+    const dispatch = useDispatch();
 
     const headerLinks = () => {
         if (headData && headData.visible) {
             return headData.links.map((item, i) => (
                 <div className="header-info-item" key={i}>
-                    <Link to={item.href ? item.href : "/"}>{item.title}</Link>
+                    <Link to={item.href ? item.href : "/"}
+                        onClick={ () => {  
+                            if(item.href === "/catalog") {
+                                dispatch(changeFilter(null));
+                                dispatch(productsFetch());
+                            }
+                        }
+                        }
+                    >{item.title}</Link>
                 </div>
             ))
         }

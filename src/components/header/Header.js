@@ -19,9 +19,6 @@ const Header = () => {
         });
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
-    
-    console.log(headerData);
-
 
 	return (
 		<header className="header">

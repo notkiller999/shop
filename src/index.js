@@ -10,12 +10,12 @@ const container = document.getElementById('root');
 const root = createRoot(container);
 
 root.render(
-	// <React.StrictMode>
+	<React.StrictMode>
 		<PersistGate loading={null} persistor={persistor}>
 			<Provider store={store}>
 				<App/>
 			</Provider>
 		</PersistGate>
-  	// </React.StrictMode>
+  	</React.StrictMode>
 );
 

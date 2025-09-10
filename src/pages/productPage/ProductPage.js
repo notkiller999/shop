@@ -12,9 +12,9 @@ import "./slider.scss";
 
 const ProductPage = () => {
 
-	const id = window.location.href.slice(
+	const id = window.location.href.slice(        
 		window.location.href.indexOf("id=") + 3
-	);
+	);    
 	
 
 	const dispatch = useDispatch();
